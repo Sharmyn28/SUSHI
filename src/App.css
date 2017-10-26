@@ -355,6 +355,7 @@ h3{
   position: relative;
   width: 200px;
   margin-bottom: 20px;
+  background: #fff url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/item-separator.png) repeat-y right top;
   padding-bottom: 62px;
   text-align: center;
 }
@@ -382,6 +383,7 @@ h3{
 .view-details:hover:after {
   background-color:  rgba(0,0,0,0.75);
   background-repeat: no-repeat;
+  background-image: url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/arrow-right.png);
   background-position: 50% 50%;
 }
 
@@ -979,3 +981,5 @@ table tbody td:after{
   color: #bababa;
   width: 50%;
 }
+
+/* Aydee */
