@@ -1,34 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './Carousel.css';
-import {dishes} from 'dishes'
+import {dishes} from './dishes'
 
-const ShoppingCart = ({dishes}) => {
-	const dishesList = dishes.map((dish, index)=>{
-		return(
-			<InfoDish
-				key={index}
-				image={dish.image}
-				price={dish.price}
-				description={dish.description}
-				nutritional = {dish.nutritional}
-				nutritionalInfo= {dish.nutritionalInfo}/>
-		)
-	})
-}
-
-const InfoDish = ({ id, image, name, description,price ,nutritional, nutritionalInfo}) => {
+const InfoDish = ({ image, name, description,price ,nutritional, nutritionalInfo}) => {
 	return (
-		<div>
-		<ol className="carousel-indicators">
-			<ul>{dishesList}</ul>
-			<li
-				data-target="#carousel-example-generic"
-				data-slide-to={id}
-				className="active" />
-		</ol>
-				{/* Wrapper for slides */ }
-	<div
+		<div
 		className="carousel-inner text-center"
 		role="listbox">
 		<div className="item active">
@@ -63,6 +40,36 @@ const InfoDish = ({ id, image, name, description,price ,nutritional, nutritional
 			</div>
 		</div>
 	</div>
+	)
+}
+
+
+const Carousel = ({ dishes, id}) => {
+			<InfoDish 
+			key= {index}
+			image={dish[id].image}
+				price={dish[id].price}
+				description={dish[id].description}
+				nutritional = {dish[id].nutritional}
+				nutritionalInfo= {dish[id].nutritionalInfo}
+			/>
+		
+	return (
+		<div className="background-fish">
+			<div className="container carousel">
+				<div
+					id="carousel-example-generic"
+					className="carousel slide" data-ride="carousel">
+					
+					<div>
+		<ol className="carousel-indicators">
+			<li
+				data-target="#carousel-example-generic"
+				data-slide-to={id}
+				className="active" />
+		</ol>
+				{/* Wrapper for slides */ }
+				{listInfo}
 		<a
 			className="left carousel-control"
 			href="#carousel-example-generic"
@@ -84,17 +91,6 @@ const InfoDish = ({ id, image, name, description,price ,nutritional, nutritional
 			<span className="sr-only">Next</span>
 		</a>
 		</div>
-	)
-}
-
-
-const Carousel = ({ dishes }) => {
-	return (
-		<div className="background-fish">
-			<div className="container carousel">
-				<div
-					id="carousel-example-generic"
-					className="carousel slide" data-ride="carousel">
 				</div>
 			</div>
 		</div>
