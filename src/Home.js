@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'redux-zero/react';
-/* import {Redirect, NavLink} from 'react-router-dom'; */
+/* import {Redirect, NavLink} from 'react-router-dom';*/
 import './App.css';
 
 const Home = ( {dishes}) =>  {
