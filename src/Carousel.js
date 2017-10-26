@@ -6,6 +6,7 @@ import './Carousel.css';
 class Carousel extends Component {
 	render() {
 		return (
+			<div className="background-fish">
 			<div className="container carousel">
 				<div
 					id="carousel-example-generic"
@@ -29,7 +30,7 @@ class Carousel extends Component {
 						className="carousel-inner text-center"
 						role="listbox">
 						<div className="item active">
-							<div className="col-lg-3 pull-right">
+							<div className="col-lg-3 pull-left">
 								<img src="http://demos.telerik.com/kendo-ui/content/spa/websushi/images/200/sashimi-salad.jpg" />
 							</div>
 							<div className="col-lg-6">
@@ -48,14 +49,23 @@ class Carousel extends Component {
 											className="btn btn-info pull-right"
 											href="/article/show/sed-vel-lectus/9">
 												<i className="fa fa-long-arrow-right">
+													+ADD TO CART
 												</i>
 											</a>
 									</div>
 								</div>
+							</div>
+							<div className="col-lg-3 pull-right">
+								<h5>Nutritional Information</h5>
+								<ul>
+									<li> Protein: 2.9156 </li>
+									<li> Fat (total): 2.4396 </li>
+									<li> Carbohydrate: 2.4396 </li>
+								</ul>
 							</div>
 						</div>
 						<div className="item">
-							<div className="col-lg-3 pull-right">
+							<div className="col-lg-3 pull-left">
 								<img src="http://demos.telerik.com/kendo-ui/content/spa/websushi/images/200/sashimi-salad.jpg" />
 							</div>
 							<div className="col-lg-6">
@@ -64,7 +74,6 @@ class Carousel extends Component {
 								<p>
 									Organic greens topped with fresh sashimi, wasabi soy vinaigrette.
                 </p>
-								
 								<hr/>
 								<div className="row">
 									<div className="col-lg-6">
@@ -79,10 +88,18 @@ class Carousel extends Component {
 											</a>
 									</div>
 								</div>
+							</div>
+							<div className="col-lg-3 pull-right">
+								<h5>Nutritional Information</h5>
+								<ul>
+									<li> Protein: 2.9156 </li>
+									<li> Fat (total): 2.4396 </li>
+									<li> Carbohydrate: 2.4396 </li>
+								</ul>
 							</div>
 						</div>
-						<div className="item ">
-							<div className="col-lg-3 pull-right">
+						<div className="item">
+							<div className="col-lg-3 pull-left">
 								<img src="http://demos.telerik.com/kendo-ui/content/spa/websushi/images/200/sashimi-salad.jpg" />
 							</div>
 							<div className="col-lg-6">
@@ -105,6 +122,14 @@ class Carousel extends Component {
 											</a>
 									</div>
 								</div>
+							</div>
+							<div className="col-lg-3 pull-right">
+								<h5>Nutritional Information</h5>
+								<ul>
+									<li> Protein: 2.9156 </li>
+									<li> Fat (total): 2.4396 </li>
+									<li> Carbohydrate: 2.4396 </li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -130,6 +155,7 @@ class Carousel extends Component {
 					</a>
 				</div>
 			</div>
+		</div>
 
 		);
 	}
