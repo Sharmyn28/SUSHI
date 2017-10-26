@@ -49,7 +49,6 @@ border:0;
 html {
   font: 75% 'Droid Sans', sans-serif;
   height: 100%;
-  background: #0c0c0c url('images/background-image.png') repeat left top;
 }
 
 h1, h2, h3, #main-nav, #main-nav li, ul, ul li {
@@ -73,7 +72,6 @@ h1.logo{
 display: inline-block;
 width: 140px;
 height: 32px;
-background: url('images/logo.png') 0 0 no-repeat;
 }
 
 h1 a{
@@ -166,7 +164,6 @@ h1 a{
   position: absolute;
   content:" ";
   display: block;
-  background: url('images/arrow-reverse.png') no-repeat right top;
   top: 8px;
   right: 10px;
   width: 20px;
@@ -199,7 +196,6 @@ h1 a{
 }
 
 .smallImage{
-  background: url('images/smallImage.jpg') no-repeat;
   position: relative;
   width: 100px;
   height: 100px;
@@ -347,7 +343,6 @@ h3{
 
 .view-selected-items:hover:after {
   background-color:  rgba(0,0,0,0.75);
-  background-image: url('images/remove-icon.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -361,7 +356,6 @@ h3{
   width: 200px;
   margin-bottom: 20px;
   padding-bottom: 62px;
-  background: #fff url('images/item-separator.png') repeat-y right top;
   text-align: center;
 }
 
@@ -387,7 +381,6 @@ h3{
 
 .view-details:hover:after {
   background-color:  rgba(0,0,0,0.75);
-  background-image: url('images/arrow-right.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -492,18 +485,17 @@ h3{
   width: 600px;
   height: 200px;
   display: inline-block;
-  background: #fff url('images/item-separator.png') repeat-y right top;
 }
 
 #navigate-prev {
   display: inline-block;
   height: 200px;
   width: 100px;
-  background: #000 url('images/nav-prev.png') no-repeat center;
+  background: #000
 }
 
 #navigate-prev:hover{
-  background: #d60041 url('images/nav-prev.png') no-repeat center;
+  background: #d60041
 }
 
 #description{
@@ -677,33 +669,29 @@ p#details-total-price span{
   display: inline-block;
   height: 200px;
   width: 100px;
-  background: #000 url('images/nav-next.png') no-repeat center;
+  background: #000 
 }
 
 #navigate-next:hover{
-  background: #d60041 url('images/nav-next.png') no-repeat center;
+  background: #d60041 
 }
 
 
 #details-top-image{
-  background: url('images/sushi-preview.png') no-repeat top left;
   height: 200px;
 }
 
 
 #checkout-top-image{
-  background: url('images/sushi-preview.png') no-repeat top left;
   height: 50px;
 }
 
 #checkout-bottom-image{
-  background: url('images/sushi-preview.png') no-repeat bottom left;
   height: 53px;
   margin-bottom: 20px;
 }
 
 #details-bottom-image{
-  background: url('images/sushi-preview.png') no-repeat bottom left;
   height: 200px;
   margin-bottom: 20px;
 }
@@ -886,7 +874,6 @@ table tbody td:first-child + td + td p{
   position: absolute;
   content: " ";
   display: block;
-  background: url('images/close-icon.png') no-repeat;
   top: 32px;
   right: 32px;
   width: 38px;
