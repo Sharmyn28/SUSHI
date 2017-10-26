@@ -5,8 +5,8 @@ export const dishes=[
                         name:"Sashimi salad",
                         description:"Organic greens topped with fresh sashimi, wasabi soy vinaigrette.",
                         price: 12.00,
-                        nutrional:"Nutritional Information",
-                        nutrionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
+                        nutritional:"Nutritional Information",
+                        nutritionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
                         },
                        {
                         id:1,
@@ -14,8 +14,8 @@ export const dishes=[
                         name:"Chirashi sushi",
                         description:"Sushi bar variety with sushi rice.",
                         price: 21.00,
-                        nutrional:"Nutritional Information",
-                        nutrionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
+                        nutritional:"Nutritional Information",
+                        nutritionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
                         },
                        {
                         id:2,
@@ -23,8 +23,8 @@ export const dishes=[
                         name:"Seaweed salad",
                         description:"A nice seaweed salad.",
                         price: 12.00,
-                        nutrional:"Nutritional Information",
-                        nutrionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
+                        nutritional:"Nutritional Information",
+                        nutritionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
                         },
                        {
                         id:3,
@@ -32,8 +32,8 @@ export const dishes=[
                         name:"Edamame",
                         description:"Organic greens topped with fresh sashimi, wasabi soy vinaigrette.",
                         price: 12.00,
-                        nutrional:"Nutritional Information",
-                        nutrionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
+                        nutritional:"Nutritional Information",
+                        nutritionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
                         },
                        {
                         id:4,
@@ -41,8 +41,8 @@ export const dishes=[
                         name:"Miso soup",
                         description:"Organic greens topped with fresh sashimi, wasabi soy vinaigrette.",
                         price: 12.00,
-                        nutrional:"Nutritional Information",
-                        nutrionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
+                        nutritional:"Nutritional Information",
+                        nutritionalInfo:["Protein: 2.9156", "Fat (total): 2.4396", "Carbohydrate: 2.4396", "Energy: (kJ)17.5775", "Energy (kcal): 4.2011", "Sugar: 0.3738"],
                         },  
                       
                       
