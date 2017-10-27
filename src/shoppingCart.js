@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './shoppingCart.css';
-import dishes from './dishes'
+import dishes from './dishes';
+import './App.css';
 
 const Dish = ({src, price}) => {
 	return (
@@ -16,7 +17,7 @@ const Dish = ({src, price}) => {
 }
 
 const ShoppingCart = ({dishes}) => {
-	const dishesList = dishes.map((dish, index) =>{
+/* 	const dishesList = dishes.map((dish, index) =>{
 		return(
 			<Dish 
 				key={index}
@@ -24,13 +25,13 @@ const ShoppingCart = ({dishes}) => {
 				price={dish.price}
 			/>
 		)
-	})
+	}) */
 	return (
 		<section id='pre-content'>
 			<div>
 				<div id='shop-info'>
-					<ul data-role='listview' className='k-widget k-listview'>
-						{dishesList}
+					<ul data-role='listview' className='k-widget k-listview' id="shop-list">
+						
 					</ul>
 					<div id='shopping-cart'>
 						<h3>your<br />shopping cart</h3>
