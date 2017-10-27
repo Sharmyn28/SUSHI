@@ -17,7 +17,6 @@ const Index = () => (
             <Route  exact path = "/" component={Home}/>
             <Route  exact path = "/home" component={Home}/>
             <Route  exact path = "/carousel" component={Carousel}/>
-
           </Switch>
       </HashRouter>
    </Provider>
