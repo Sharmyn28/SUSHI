@@ -12,13 +12,6 @@ const Checkout = ({shopDishes}) => {
     const Listdishs=shopDishes.map((item,index)=>{
         return( 
         <table>
-        <thead>
-         <tr>
-          <th>Item</th>
-          <th>Quantity</th>
-          <th>Price</th>
-        </tr>                           
-        </thead>
         <tbody>
             <tr>
              <td>
@@ -37,11 +30,21 @@ const Checkout = ({shopDishes}) => {
     });
     // primera vista
     return (
-        <section id="content" class="style" >
+        <section id="content" class="style section-final" >
             <div>
                 <div id="checkout-top-image"></div>
                 <div id="details-checkout">
                     <h1>Order Details</h1>
+                    <table>
+                    <thead>
+                        <tr>
+                        <th>Item</th>
+                        <th></th>
+                        <th>Quantity</th>
+                        <th className="text-right">Price</th>
+                        </tr>                           
+                    </thead>
+                    </table>
                     { Listdishs}
                     <p id="total-checkout"><em>total:</em><span data-bind="text: totalPrice">$4.00</span></p>
                     <a class="cancel-order" href="#" data-bind="click: emptyCart">cancel order</a>
