@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './shoppingCart.css';
 import {NavLink} from 'react-router-dom';
 import dishes from './dishes';
+// import {dishes,shopDishes} from '/dishes';
 import './App.css';
 
 const Dish = ({src, price, count}) => {
@@ -16,7 +17,7 @@ const Dish = ({src, price, count}) => {
 		</li>
 	)
 }
-const ShoppingCart = ({dishes}) => {
+const ShoppingCart = ({shopDishes}) => {
  	const dishesList = dishes.map((dish, index) =>{
 		return(
 			<Dish 
