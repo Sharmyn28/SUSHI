@@ -23,6 +23,7 @@ const App = ({dishes, shopDishes}) => {
       </div>
     </div >
   );
+  console.log("dish",dishes);
 }
 
 //export default App;

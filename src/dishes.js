@@ -192,6 +192,7 @@ export const dishes = [
 	}
 ];
 
+
 export const shopDishes = [
 	{
 		image: "http://demos.telerik.com/kendo-ui/content/spa/websushi/images/200/sashimi-salad.jpg",
@@ -199,4 +200,3 @@ export const shopDishes = [
 		count:1,
 	},
 ];
-

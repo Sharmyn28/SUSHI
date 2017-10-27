@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './shoppingCart.css';
+import {NavLink} from 'react-router-dom';
 import {dishes, shopDishes } from './dishes';
 import {removeDish, deleteAll} from './actions';
 import './App.css';
@@ -47,6 +48,9 @@ const ShoppingCart = ({shopDishes}) => {
 						<p className='total-price'>${totalPrice}</p>
 						<a id='empty-cart' onClick={() => deleteAll()}>empty cart</a>
 						<a id='checkout'>checkout</a>
+						<p className='total-price'>${totalPrice}.00</p>
+						<a id='empty-cart'>empty cart</a>
+						<a id='checkout'> <NavLink to={"/details"}>checkout</NavLink></a>
 					</div>
 				</div>
 			</div>
