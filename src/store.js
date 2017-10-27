@@ -3,6 +3,7 @@ import {dishes, selectedFood} from './dishes'
 
 const initialState = {
    dishes: dishes,
+   shopDishes:[],
    selectedFood: 0
 }
 

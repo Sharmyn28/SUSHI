@@ -21,4 +21,4 @@ export const previewAction = () => {
            store.setState({
               selectedFood : selectedFood
            })
-        }
+    }
