@@ -75,7 +75,7 @@ const Carousel = ({ dishes, selectedFood }) => {
 							description={dishes[selectedFood].description}
 							nutritional={dishes[selectedFood].nutritional}
 							nutritionalInfo={dishes[selectedFood].nutritionalInfo}
-							selectedFood={[selectedFood]}
+							selectedFood={selectedFood}
 						/>
 						<a
 							className="left carousel-control next1"

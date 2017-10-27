@@ -22,7 +22,6 @@ export const addDishes = (index) => {
     store.setState({
         shopDishes: newList
      });
-    console.log('agrega')
 }
 
 export const removeDish = (index) =>{
