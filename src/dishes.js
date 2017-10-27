@@ -192,5 +192,4 @@ export const dishes = [
 	}
 ];
 
-
 export const shopDishes = [];
