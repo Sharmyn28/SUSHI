@@ -18,7 +18,6 @@ const Lista_Dishes = ({image, name, price, index}) =>{
           </span>
           </NavLink>
         </a>
-        {/* <NavLink className="btn btn-button title" to={playList.ruta}>{playList.title}</NavLink > */}
         <button className="add-to-cart"  onClick={() => addDishes(index)}>Add to cart</button>
       </li>
   );
