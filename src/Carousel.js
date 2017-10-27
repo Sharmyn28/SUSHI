@@ -6,8 +6,9 @@ import { nextAction, previewAction } from './actions-diana';
 import Header from './header';
 import ShoppingCart from './shoppingCart';
 import Footer from './footer';
+import {addDishes} from './actions'
 
-const InfoDish = ({ image, name, description, price, nutritional, nutritionalInfo }) => {
+const InfoDish = ({ image, name, description, price, nutritional, nutritionalInfo, index }) => {
 	return (
 		<div
 			className="carousel-inner text-center"
@@ -26,13 +27,14 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 							$ {price}.00
                 		</div>
 						<div className="col-lg-6">
-							<a
+							<button
 								className="btn btn-danger pull-right"
-								href="/article/show/sed-vel-lectus/9">
+								href="/article/show/sed-vel-lectus/9"
+								>
 								<i className="fa fa-long-arrow-right">
 									+ADD TO CART
               					</i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -97,14 +99,14 @@ const Carousel = ({ dishes, selectedFood }) => {
 
 }
 
-const CarouselView = ({ dishes, selectedFood }) => {
+const CarouselView = ({ dishes, selectedFood, shopDishes }) => {
 	return (
 		<div id='application'>
 			<div>
 				<div id='wrapper'>
 					<Header />
 					<div id='main-section'>
-						<ShoppingCart dishes={dishes} />
+						<ShoppingCart shopDishes={shopDishes} />
 						<Carousel dishes={dishes} selectedFood={selectedFood} />
 					</div>
 					<Footer />
@@ -114,5 +116,5 @@ const CarouselView = ({ dishes, selectedFood }) => {
 	)
 }
 
-const mapToProps = ({ dishes, selectedFood }) => ({ dishes, selectedFood });
+const mapToProps = ({ dishes, selectedFood, shopDishes }) => ({ dishes, selectedFood, shopDishes });
 export default connect(mapToProps)(CarouselView);
