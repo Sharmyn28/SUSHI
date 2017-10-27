@@ -490,17 +490,6 @@ h3{
   display: inline-block;
 }
 
-#navigate-prev {
-  display: inline-block;
-  height: 200px;
-  width: 100px;
-  background: #000
-}
-
-#navigate-prev:hover{
-  background: #d60041
-}
-
 #description{
   display: inline-block;
   position: relative;
@@ -668,17 +657,46 @@ p#details-total-price span{
   width: 45px;
 }
 
+.last-div{
+  border-left-color: #615F5F;
+  height: 100%;
+}
+
 #navigate-next {
   display: inline-block;
   height: 200px;
   width: 100px;
-  background: #000 
+  background: #000; 
+  background-image: url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/nav-next.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: -3px;
 }
 
 #navigate-next:hover{
-  background: #d60041 
+  background: #d60041;
+  background-image: url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/nav-next.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+#navigate-prev {
+  display: inline-block;
+  height: 200px;
+  width: 100px;
+  margin-left: -3px;  
+  background: #000;
+  background-image: url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/nav-prev.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#navigate-prev:hover{
+  background: #d60041;
+  background-image: url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/nav-prev.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 #details-top-image{
   height: 200px;

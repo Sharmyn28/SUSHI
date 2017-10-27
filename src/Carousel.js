@@ -6,8 +6,9 @@ import { nextAction, previewAction } from './actions-diana';
 import Header from './header';
 import ShoppingCart from './shoppingCart';
 import Footer from './footer';
+import {addDishes} from './actions'
 
-const InfoDish = ({ image, name, description, price, nutritional, nutritionalInfo }) => {
+const InfoDish = ({ image, name, description, price, nutritional, nutritionalInfo, selectedFood }) => {
 	return (
 		<div
 			className="carousel-inner text-center"
@@ -26,21 +27,23 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 							$ {price}.00
                 		</div>
 						<div className="col-lg-6">
-							<a
+							<button
 								className="btn btn-danger pull-right"
-								href="/article/show/sed-vel-lectus/9">
+								href="/article/show/sed-vel-lectus/9"
+								onClick={() => addDishes(selectedFood)}
+								>
 								<i className="fa fa-long-arrow-right">
 									+ADD TO CART
               					</i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div className="col-lg-3 pull-right">
+				<div className="col-lg-3 pull-right last-div">
 					<h5>{nutritional}</h5>
 					<br />
 					<ul>
-						<li> {nutritionalInfo}</li>
+					{nutritionalInfo}
 					</ul>
 				</div>
 			</div>
@@ -72,44 +75,40 @@ const Carousel = ({ dishes, selectedFood }) => {
 							description={dishes[selectedFood].description}
 							nutritional={dishes[selectedFood].nutritional}
 							nutritionalInfo={dishes[selectedFood].nutritionalInfo}
+							selectedFood={[selectedFood]}
 						/>
 						<a
 							className="left carousel-control next1"
 							href="#carousel-example-generic"
 							role="button"
 							data-slide="prev"
-							onClick={previewAction}>
-							<span
-								className="glyphicon glyphicon-chevron-left"
-								aria-hidden="true" />
-							<span className="sr-only">Previous</span>
+							onClick={previewAction}
+							id = "navigate-prev">
 						</a>
 						<a
 							className="right carousel-control next2"
 							href="#carousel-example-generic"
 							role="button"
 							data-slide="next"
-							onClick={nextAction}>
-							<span
-								className="glyphicon glyphicon-chevron-right"
-								aria-hidden="true" />
-							<span className="sr-only">Next</span>
+							onClick={nextAction}
+							id = "navigate-next">
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	);
+
 }
 
-const CarouselView = ({ dishes, selectedFood }) => {
+const CarouselView = ({ dishes, selectedFood, shopDishes }) => {
 	return (
 		<div id='application'>
 			<div>
 				<div id='wrapper'>
-					<Header />
+					<Header shopDishes={shopDishes}/>
 					<div id='main-section'>
-						<ShoppingCart dishes={dishes} />
+						<ShoppingCart shopDishes={shopDishes} />
 						<Carousel dishes={dishes} selectedFood={selectedFood} />
 					</div>
 					<Footer />
@@ -119,5 +118,5 @@ const CarouselView = ({ dishes, selectedFood }) => {
 	)
 }
 
-const mapToProps = ({ dishes, selectedFood }) => ({ dishes, selectedFood });
+const mapToProps = ({ dishes, selectedFood, shopDishes }) => ({ dishes, selectedFood, shopDishes });
 export default connect(mapToProps)(CarouselView);
