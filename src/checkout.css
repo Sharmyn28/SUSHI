@@ -77,15 +77,18 @@ p {
     height: 53px;
     margin-bottom: 20px;
 }
-
 /* table */
-#details-checkout table {
+table thead th:first-child {
     text-align: left;
+    color: #4a4a4a;
+    font-size: 13px;
 }
-table {
-    width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    border-spacing: 0;
+thead th {
+    font-size: 13px;
+    border-bottom: 1px solid #dadada;
+}
+table thead th:first-child + th + th {
+    font-size: 13px;
+    text-align: right;
 }
 

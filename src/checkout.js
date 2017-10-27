@@ -36,6 +36,12 @@ const Checkout = ({ shopDishes }) => {
     );
     
     });
+
+    let totalDishes = shopDishes.length;
+	let totalPrice = shopDishes.reduce(function (total, dish){
+		return total + dish.price;
+	}, 0);
+
     console.log("lis",Listdishs)
     console.log("lis",shopDishes)
     // primera vista
@@ -46,7 +52,7 @@ const Checkout = ({ shopDishes }) => {
                 <div id="details-checkout">
                     <h1>Order Details</h1>
                     { Listdishs}
-                    <p id="total-checkout"><em>total:</em><span data-bind="text: totalPrice">$4.00</span></p>
+                    <p id="total-checkout"><em>total:</em><span data-bind="text: totalPrice">{totalPrice}</span></p>
                     <a class="cancel-order" href="#" data-bind="click: emptyCart">cancel order</a>
                     <button class="order-now" data-bind="click: proceed"><NavLink to={"/home"}>order now! </NavLink> </button>
                 </div>
