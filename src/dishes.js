@@ -1,3 +1,4 @@
+export const selectedFood = 0;
 export const dishes=[
                        {
                         id:0,

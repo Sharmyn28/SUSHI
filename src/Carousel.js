@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './Carousel.css';
-import {dishes} from './dishes'
+// import {dishes, selectedFood} from './dishes'
+
+import { connect } from 'redux-zero/react';
+import {nextAction, previewAction} from './actions-diana';
 
 const InfoDish = ({ image, name, description,price ,nutritional, nutritionalInfo}) => {
 	return (
@@ -44,16 +47,8 @@ const InfoDish = ({ image, name, description,price ,nutritional, nutritionalInfo
 }
 
 
-const Carousel = ({ dishes, id}) => {
-			<InfoDish 
-			key= {index}
-			image={dish[id].image}
-				price={dish[id].price}
-				description={dish[id].description}
-				nutritional = {dish[id].nutritional}
-				nutritionalInfo= {dish[id].nutritionalInfo}
-			/>
-		
+const Carousel = ({ dishes, selectedFood}) => {
+	console.log("disshes",selectedFood)
 	return (
 		<div className="background-fish">
 			<div className="container carousel">
@@ -65,16 +60,23 @@ const Carousel = ({ dishes, id}) => {
 		<ol className="carousel-indicators">
 			<li
 				data-target="#carousel-example-generic"
-				data-slide-to={id}
+				data-slide-to={selectedFood}
 				className="active" />
 		</ol>
 				{/* Wrapper for slides */ }
-				{listInfo}
+				<InfoDish 
+		  	image={dishes[selectedFood].image}
+				price={dishes[selectedFood].price}
+				description={dishes[selectedFood].description}
+				nutritional = {dishes[selectedFood].nutritional}
+				nutritionalInfo= {dishes[selectedFood].nutritionalInfo}
+			/>
 		<a
 			className="left carousel-control"
 			href="#carousel-example-generic"
 			role="button"
-			data-slide="prev">
+			data-slide="prev"
+			onClick={previewAction}>
 			<span
 				className="glyphicon glyphicon-chevron-left"
 				aria-hidden="true" />
@@ -84,7 +86,8 @@ const Carousel = ({ dishes, id}) => {
 			className="right carousel-control"
 			href="#carousel-example-generic"
 			role="button"
-			data-slide="next">
+			data-slide="next"
+			onClick={nextAction}>
 			<span
 				className="glyphicon glyphicon-chevron-right"
 				aria-hidden="true" />
@@ -97,4 +100,5 @@ const Carousel = ({ dishes, id}) => {
 	);
 }
 
-export default Carousel;
+const mapToProps = ({dishes, selectedFood}) => ({dishes, selectedFood});
+export default connect(mapToProps)(Carousel);
