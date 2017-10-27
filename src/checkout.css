@@ -1,38 +1,12 @@
-button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-#wrapper {
+ #wrapper {
     margin: 60px auto 0;
     width: 1000px;
     height: auto;
 }
-
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
 #header {
     padding-bottom: 40px;
     border-bottom: 1px solid #535353;
 }
-
-
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-user agent stylesheet
 div {
     display: block;
 }
@@ -41,19 +15,7 @@ element.style {
     display: none;
 }
 
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 /* main section */
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-user agent stylesheet
 div {
     display: block;
 }
@@ -66,11 +28,6 @@ article, aside, footer, header, hgroup, main, nav, section {
     display: block;
 }
 /* div-contet */
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 
 user agent stylesheet
 div {
@@ -81,30 +38,15 @@ div {
     background: url(images/sushi-preview.png) no-repeat top left;
     height: 50px;
 }
-
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 /* checkout-botton-image */
 #checkout-bottom-image {
     background: url(images/sushi-preview.png) no-repeat bottom left;
     height: 53px;
     margin-bottom: 20px;
 }
-
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-user agent stylesheet
 div {
     display: block;
 }
-
 /* footer */
 #footer {
     position: relative;
@@ -113,21 +55,9 @@ div {
     padding-bottom: 60px;
     color: #999;
 }
-
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 /* footter-p */
 #footer p {
     margin: 10px 0;
-}
-
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
 }
 user agent stylesheet
 p {
@@ -141,16 +71,21 @@ p {
 #footer p {
     margin: 10px 0;
 }
-
-html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 /* imagen de fondo */
 #checkout-bottom-image {
     background: url("http://demos.telerik.com/kendo-ui/content/spa/websushi/images/200/shiromi.jpg") no-repeat bottom left;
     height: 53px;
     margin-bottom: 20px;
+}
+
+/* table */
+#details-checkout table {
+    text-align: left;
+}
+table {
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-spacing: 0;
 }
 

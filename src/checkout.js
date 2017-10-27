@@ -5,13 +5,13 @@ import {NavLink} from 'react-router-dom';
 import {connect } from "redux-zero/react";
 import Footer from './footer';
 import Header from './header';
-import {shopDishes} from './dishes';
 import ShoppingCart from './shoppingCart';
+import {dishes, shopDishes} from './dishes';
 
-const Checkout = ({  shopDishes }) => {
-    const Listdishs=shopDishes.map((item,index)=>{
-        return( 
-        <table>
+const Checkout = ({ shopDishes }) => {
+    const Listdishs= shopDishes.map((item,index)=>{
+        return(             
+        <table >
         <thead>
          <tr>
           <th>Item</th>
@@ -26,15 +26,18 @@ const Checkout = ({  shopDishes }) => {
                  <img src={item.image}/></div> 
                  <span class="product-name" data-bind="text: item.name">{item.name}</span>
              </td>
-                 <td><input type="number" class="inputnumber k-widget k-numerictextbox"  name="lastname"/></td>           
+                 <td><input type="number" class="inputnumber k-widget k-numerictextbox" name="lastname"/></td>           
              <td>
                  <p class="table-price" data-bind="text: itemPrice">{item.price}</p><p></p>
              </td>
             </tr>
         </tbody>
-       </table>
+       </table>      
     );
+    
     });
+    console.log("lis",Listdishs)
+    console.log("lis",shopDishes)
     // primera vista
     return (
         <section id="content" class="style" >
@@ -53,7 +56,7 @@ const Checkout = ({  shopDishes }) => {
     )         
 }
 
-const CheckoutView = () => {
+const CheckoutView = ({shopDishes}) => {
     return (
         <div id='application' >
             <div>
@@ -69,4 +72,5 @@ const CheckoutView = () => {
     )
 }
 
-export default CheckoutView;
+const mapToProps = ({ shopDishes }) => ({ shopDishes });
+export default connect(mapToProps)(CheckoutView);
