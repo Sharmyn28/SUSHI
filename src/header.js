@@ -9,7 +9,7 @@ const Header = () => {
 			</h1>
 			<a id='cart-info'>Shopping cart
 				<span> 
-					<span>1</span>
+					<span>1</span> items
 				</span>
 			</a>
 		</div>

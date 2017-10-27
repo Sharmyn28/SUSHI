@@ -13,12 +13,12 @@ export const nextAction = () => {
 }
 
 export const previewAction = () => {
-
-    let selectedFood = store.getState().selectedFood - 1
-    if (selectedFood <= 0)
-        selectedFood = store.getState().dishes.length - 1
-
-    store.setState({
-        selectedFood: selectedFood
-    })
-}
+        
+           let selectedFood = store.getState().selectedFood - 1
+           if (selectedFood <= 0 )
+              selectedFood = store.getState().dishes.length -1
+        
+           store.setState({
+              selectedFood : selectedFood
+           })
+    }
