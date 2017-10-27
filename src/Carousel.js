@@ -44,7 +44,6 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 	)
 }
 
-
 const Carousel = ({ dishes, selectedFood }) => {
 	console.log("disshes", selectedFood)
 	return (
