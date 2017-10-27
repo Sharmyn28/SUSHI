@@ -721,6 +721,8 @@ p#details-total-price span{
   background: #fff;
   text-align: right;
   position: relative;
+  padding-left: 120px;
+  padding-right: 120px;
 }
 
 #details-checkout h1
