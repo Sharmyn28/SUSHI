@@ -15,7 +15,7 @@ const App = ({dishes, shopDishes}) => {
         <div id='wrapper'>
           <Header shopDishes={shopDishes}/>
           <div id='main-section'>
-            {shopDishes.length!=0?<ShoppingCart shopDishes={shopDishes} />:''}
+            {shopDishes.length!=0?<ShoppingCart shopDishes={shopDishes} />:<div id='header'></div>}
             <Home dishes={dishes} />
           </div>
           <Footer />

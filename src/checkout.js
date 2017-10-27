@@ -65,7 +65,7 @@ const CheckoutView = ({shopDishes}) => {
                 <div id='wrapper'>
                     <Header shopDishes={shopDishes}/>
                     <div id='main-section'>
-                        <ShoppingCart shopDishes={shopDishes} />
+                        {shopDishes.length!=0?<ShoppingCart shopDishes={shopDishes} />:<div id='header'></div>}
                         <Checkout shopDishes={shopDishes} />
                     </div>
                     <Footer />

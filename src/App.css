@@ -973,6 +973,7 @@ table tbody td:first-child + td + td p{
 
 #footer a {
   color: #d60041;
+  font-size: 12px;
 }
 
 /*clear floats*/
