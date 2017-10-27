@@ -124,7 +124,7 @@ class Carousel extends Component {
 					</a>
 				</div>
 			</div>
-
+			</div>
 		);
 	}
 }
