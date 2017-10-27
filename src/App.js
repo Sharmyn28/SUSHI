@@ -21,6 +21,7 @@ const App = ({dishes}) => {
       </div>
     </div >
   );
+  console.log("dish",dishes);
 }
 
 //export default App;
