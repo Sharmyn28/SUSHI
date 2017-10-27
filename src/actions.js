@@ -25,3 +25,10 @@ export const addDishes = (index) => {
         }
     }
 };
+
+export const deleteAll = () => {
+    console.log('borrame')
+	 store.setState({
+		shopDishes: []
+	})
+}
