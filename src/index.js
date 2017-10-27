@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Carousel from './Carousel';
 import Home from './Home';
 import {Provider} from 'redux-zero/react'
 import store from './store'
