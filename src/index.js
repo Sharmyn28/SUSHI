@@ -6,13 +6,14 @@ import {Provider} from 'redux-zero/react'
 import store from './store'
 import registerServiceWorker from './registerServiceWorker';
 import {HashRouter, Switch, Route} from 'react-router-dom'
+import App from './App';
 
 const Index = () => (
    <Provider store={store}>
       <HashRouter>
          <Switch>
-            <Route  exact path = "/" component={Home}/>
-            <Route  exact path = "/home" component={Home}/>
+            <Route  exact path = "/" component={App}/>
+            <Route  exact path = "/home" component={App}/>
           </Switch>
       </HashRouter>
    </Provider>

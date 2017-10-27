@@ -1,5 +1,5 @@
 import createStore from 'redux-zero'
-import {dishes} from './dishes'
+import dishes from './dishes'
 
 const initialState = {
    dishes: dishes,
