@@ -13,19 +13,20 @@ const InfoDish = ({ image, name, description,price ,nutritional, nutritionalInfo
 		role="listbox">
 		<div className="item active">
 			<div className="col-lg-3 pull-left">
-				<img src={image} />
+				<img className="img1" src={image} />
 			</div>
-			<div className="col-lg-6">
-				<h2>{name}</h2>
-				<p>{description}</p>
-				<hr />
+			<div className="col-lg-6 info-middle">
+				<br/>
+				<h1 className="text-left">{name}</h1>
+				<p className="text-left">{description}</p>
+				<br /><hr/>
 				<div className="row">
 					<div className="col-lg-6 price1">
-						$ {price}
+						$ {price}.00
 								</div>
 					<div className="col-lg-6">
 						<a
-							className="btn btn-info pull-right"
+							className="btn btn-danger pull-right"
 							href="/article/show/sed-vel-lectus/9">
 							<i className="fa fa-long-arrow-right">
 								+ADD TO CART
@@ -36,6 +37,7 @@ const InfoDish = ({ image, name, description,price ,nutritional, nutritionalInfo
 			</div>
 			<div className="col-lg-3 pull-right">
 				<h5>{nutritional}</h5>
+				<br/>
 				<ul>
 					<li> {nutritionalInfo}</li>
 				</ul>
@@ -64,6 +66,7 @@ const Carousel = ({ dishes, selectedFood}) => {
 		</ol>
 				{/* Wrapper for slides */ }
 				<InfoDish 
+				name={dishes[selectedFood].name}
 		  	image={dishes[selectedFood].image}
 				price={dishes[selectedFood].price}
 				description={dishes[selectedFood].description}

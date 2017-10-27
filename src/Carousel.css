@@ -8,12 +8,16 @@ html {
     background-color: black;
 }
 
+h1{
+    color: black;
+}
+
 .background-fish{
     background-image: url(https://www.dailyscandinavian.com/wp-content/uploads/2017/03/210317-sushi-in-oslo.jpg);
     background-size: cover;
     padding-top: 100px;
     padding-bottom: 150px;
-    margin: 0 3.8% 0 10.5%;
+    width: 100%
 }
 
 h3 {
@@ -127,4 +131,19 @@ a {
       transform: translate3d(-16.7%, 0, 0);
   }
   
+}
+
+h5{
+    font-weight: bold;
+}
+
+.img1{
+    margin-left: -56px;
+    height: 100%;
+}
+
+.price1{
+    color: #756C6C;
+    font-size: 200%;
+    font-weight: 400;
 }
