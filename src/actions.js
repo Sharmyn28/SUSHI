@@ -6,13 +6,17 @@ export const addDishes = (index) => {
     for(let i in meme){
         if(i==index){
             console.log('entreeee');
+            let ide = meme[i].id;
             let img = meme[i].image;
+            let name = meme[i].name;
             let px = meme[i].price;
             let qq = meme[i].count;
 
             const newList = oldList.concat({
                 /* id: oldList.length, */
+                id: ide,
                 image: img,
+                name: name,
                 price: px,
                 count: qq
             });
