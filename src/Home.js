@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'redux-zero/react';
 import { NavLink } from 'react-router-dom';
-/* import {Redirect, NavLink} from 'react-router-dom';*/
 import { addDishes, moveSlides } from './actions'
 import './App.css';
 
@@ -41,6 +40,4 @@ const Home = ({ dishes }) => {
   </section>)
 }
 
-/*const mapToProps = ({dishes}) => ({dishes});
-export default connect(mapToProps)(Home);*/
 export default Home;

@@ -26,6 +26,5 @@ const App = ({dishes, shopDishes}) => {
   console.log("dish",dishes);
 }
 
-//export default App;
 const mapToProps = ({ dishes, shopDishes }) => ({ dishes, shopDishes });
 export default connect(mapToProps)(App);
