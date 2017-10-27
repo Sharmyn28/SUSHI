@@ -28,10 +28,10 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 						<div className="col-lg-6">
 							<a
 								className="btn btn-danger pull-right"
-								href="/article/show/sed-vel-lectus/9">
+								href="/article/show/sed-vel-lectus/9" >
 								<i className="fa fa-long-arrow-right">
 									+ADD TO CART
-              					</i>
+              	</i>
 							</a>
 						</div>
 					</div>
