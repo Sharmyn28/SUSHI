@@ -9,12 +9,14 @@ const Lista_Dishes = ({image, name, price, index}) =>{
   return(
         <li className="products">
         <a className="view-details">
-          <img className="main-image" src={image}/>
+        <NavLink to={"/carousel"}>
+        <img className="main-image" src={image}/>
           <strong>{name}</strong>
           <span className="price">
             <span>$</span>
             <span>{price}</span>
           </span>
+          </NavLink>
         </a>
         {/* <NavLink className="btn btn-button title" to={playList.ruta}>{playList.title}</NavLink > */}
         <button className="add-to-cart"  onClick={() => addDishes(index)}>Add to cart</button>
@@ -35,8 +37,7 @@ const Home = ( {dishes}) =>  {
   return (<section id="content">
     <div>
       <ul className="k-widget k-listview">
-       
-        <NavLink to={"/carousel"}> {listaComponent}</NavLink>
+        {listaComponent}
       </ul>
     </div>
   </section>)
