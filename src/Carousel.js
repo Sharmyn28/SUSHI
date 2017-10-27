@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './Carousel.css';
 // import {dishes, selectedFood} from './dishes'
 
@@ -7,6 +6,7 @@ import { connect } from 'redux-zero/react';
 import { nextAction, previewAction } from './actions-diana';
 import Header from './header';
 import ShoppingCart from './shoppingCart';
+import Footer from './footer';
 
 const InfoDish = ({ image, name, description, price, nutritional, nutritionalInfo }) => {
 	return (
@@ -109,6 +109,7 @@ const CarouselView = ({dishes, selectedFood}) => {
 						<ShoppingCart dishes={dishes} />
 						<Carousel dishes={dishes} selectedFood={selectedFood}/>
 					</div>
+					<Footer />
 				</div>
 			</div>
 		</div >

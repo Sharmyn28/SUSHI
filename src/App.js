@@ -6,6 +6,7 @@ import Header from './header';
 import dishes from './dishes'
 import Home from './Home'
 import { connect } from 'redux-zero/react';
+import Footer from './footer';
 
 const App = ({dishes}) => {
   return (
@@ -17,6 +18,7 @@ const App = ({dishes}) => {
             <ShoppingCart dishes={dishes} />
             <Home dishes={dishes} />
           </div>
+          <Footer />
         </div>
       </div>
     </div >
