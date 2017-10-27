@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './shoppingCart.css';
-import dishes from './dishes';
+import {dishes, shopDishes } from './dishes';
 import './App.css';
 
 const Dish = ({src, price, count}) => {
@@ -16,8 +16,8 @@ const Dish = ({src, price, count}) => {
 	)
 }
 
-const ShoppingCart = ({dishes}) => {
- 	const dishesList = dishes.map((dish, index) =>{
+const ShoppingCart = ({shopDishes}) => {
+ 	const dishesList = shopDishes.map((dish, index) =>{
 		return(
 			<Dish 
 				key={index}
