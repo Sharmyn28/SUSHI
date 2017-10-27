@@ -97,14 +97,14 @@ const Carousel = ({ dishes, selectedFood }) => {
 
 }
 
-const CarouselView = ({ dishes, selectedFood }) => {
+const CarouselView = ({ dishes, selectedFood, shopDishes }) => {
 	return (
 		<div id='application'>
 			<div>
 				<div id='wrapper'>
 					<Header />
 					<div id='main-section'>
-						<ShoppingCart dishes={dishes} />
+						<ShoppingCart shopDishes={shopDishes} />
 						<Carousel dishes={dishes} selectedFood={selectedFood} />
 					</div>
 					<Footer />
@@ -114,5 +114,5 @@ const CarouselView = ({ dishes, selectedFood }) => {
 	)
 }
 
-const mapToProps = ({ dishes, selectedFood }) => ({ dishes, selectedFood });
+const mapToProps = ({ dishes, selectedFood, shopDishes }) => ({ dishes, selectedFood, shopDishes });
 export default connect(mapToProps)(CarouselView);
