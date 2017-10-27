@@ -8,7 +8,7 @@ import Header from './header';
 import {shopDishes} from './dishes';
 import ShoppingCart from './shoppingCart';
 
-const Checkout = ({  shopDishes }) => {
+const Checkout = ({shopDishes}) => {
     const Listdishs=shopDishes.map((item,index)=>{
         return( 
         <table>
@@ -54,14 +54,15 @@ const Checkout = ({  shopDishes }) => {
     
 }
 
-const CheckoutView = () => {
+
+const CheckoutView = ({shopDishes}) => {
     return (
         <div id='application' >
             <div>
                 <div id='wrapper'>
                     <Header shopDishes={shopDishes}/>
                     <div id='main-section'>
-                        {/*<ShoppingCart dishes={dishes} />*/}
+                        <ShoppingCart shopDishes={shopDishes} />
                         <Checkout shopDishes={shopDishes} />
                     </div>
                     <Footer />
@@ -71,4 +72,6 @@ const CheckoutView = () => {
     )
 }
 
-export default CheckoutView;
+//export default CheckoutView;
+const mapToProps = ({shopDishes}) => ({shopDishes});
+export default connect(mapToProps)(CheckoutView);
