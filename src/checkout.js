@@ -26,9 +26,9 @@ const Checkout = ({shopDishes}) => {
                  <img src={item.image}/></div> 
                  <span class="product-name" data-bind="text: item.name">{item.name}</span>
              </td>
-                 <td><input type="number" class="inputnumber k-widget k-numerictextbox" name="lastname"/></td>           
+                 <td><input type="number" class="inputnumber k-widget k-numerictextbox" name="lastname" value={item.count} /></td>           
              <td>
-                 <p class="table-price" data-bind="text: itemPrice">{item.price}</p><p></p>
+                 <p class="table-price" data-bind="text: itemPrice"> ${item.price}</p><p></p>
              </td>
             </tr>
         </tbody>
@@ -37,9 +37,10 @@ const Checkout = ({shopDishes}) => {
     
     });
 
+    
     let totalDishes = shopDishes.length;
 	let totalPrice = shopDishes.reduce(function (total, dish){
-		return total + dish.price;
+		return total +(dish.price*dish.count);
 	}, 0);
 
     console.log("lis",Listdishs)
@@ -52,7 +53,7 @@ const Checkout = ({shopDishes}) => {
                 <div id="details-checkout">
                     <h1>Order Details</h1>
                     { Listdishs}
-                    <p id="total-checkout"><em>total:</em><span data-bind="text: totalPrice">{totalPrice}</span></p>
+                    <p id="total-checkout"><em>total:</em><span data-bind="text: totalPrice">${totalPrice}</span></p>
                     <a class="cancel-order" href="#" data-bind="click: emptyCart">cancel order</a>
                     <button class="order-now" data-bind="click: proceed"><NavLink to={"/home"}>order now! </NavLink> </button>
                 </div>
