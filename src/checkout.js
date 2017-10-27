@@ -24,7 +24,7 @@ const Checkout = ({  shopDishes }) => {
              <td>
                  <div class="cart-image-wrapper">
                  <img src={item.image}/></div> 
-                 {/* <span class="product-name" data-bind="text: item.name">{item.name}</span> */}
+                 <span class="product-name" data-bind="text: item.name">{item.name}</span>
              </td>
                  <td><input type="number" class="inputnumber k-widget k-numerictextbox"  name="lastname"/></td>           
              <td>
