@@ -30,6 +30,8 @@ const Home = ( {dishes}) =>  {
     </section>)
     }
   
-    const mapToProps = ({dishes}) => ({dishes});
-    export default connect(mapToProps)(Home);
+    /*const mapToProps = ({dishes}) => ({dishes});
+    export default connect(mapToProps)(Home);*/
+
+    export default Home;
   

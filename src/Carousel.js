@@ -100,6 +100,7 @@ const Carousel = ({ dishes, selectedFood}) => {
 			</div>
 		</div>
 	);
+
 }
 
 const mapToProps = ({dishes, selectedFood}) => ({dishes, selectedFood});

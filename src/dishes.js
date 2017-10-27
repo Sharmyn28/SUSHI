@@ -172,3 +172,11 @@ export const dishes=[
                         nutritionalInfo:["Protein: 1.7697", "Fat (total): 0.2534", "Carbohydrate: 0.2534", "Energy (kJ): 7.508", "Energy (kcal): 1.7945", "Sugar: 0.1798"],
                         }
                     ];
+                    // const initialState = {
+                    //     dishes:dishes ,
+                    //     selectedList: -1
+                    //  };
+                     
+                    //  const store = createStore(initialState);
+                    //  export default store;
+
