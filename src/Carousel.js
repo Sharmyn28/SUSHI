@@ -6,8 +6,9 @@ import { nextAction, previewAction } from './actions-diana';
 import Header from './header';
 import ShoppingCart from './shoppingCart';
 import Footer from './footer';
+import {addDishes} from './actions'
 
-const InfoDish = ({ image, name, description, price, nutritional, nutritionalInfo }) => {
+const InfoDish = ({ image, name, description, price, nutritional, nutritionalInfo, index }) => {
 	return (
 		<div
 			className="carousel-inner text-center"
@@ -26,13 +27,14 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 							$ {price}.00
                 		</div>
 						<div className="col-lg-6">
-							<a
+							<button
 								className="btn btn-danger pull-right"
-								href="/article/show/sed-vel-lectus/9">
+								href="/article/show/sed-vel-lectus/9"
+								onClick={() => addDishes(index)}>
 								<i className="fa fa-long-arrow-right">
 									+ADD TO CART
               					</i>
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
