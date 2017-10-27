@@ -1,38 +1,38 @@
 import React, { Component } from 'react';
-import {connect} from 'redux-zero/react';
-import {NavLink} from 'react-router-dom';
+import { connect } from 'redux-zero/react';
+import { NavLink } from 'react-router-dom';
 /* import {Redirect, NavLink} from 'react-router-dom';*/
-import {addDishes} from './actions'
+import { addDishes } from './actions'
 import './App.css';
 
-const Lista_Dishes = ({image, name, price, index}) =>{
-  return(
-        <li className="products">
+const Lista_Dishes = ({ image, name, price, index }) => {
+  return (
+    <li className="products">
+      <NavLink to={"/carousel"}>
         <a className="view-details">
-        <NavLink to={"/carousel"}>
-        <img className="main-image" src={image}/>
+          <img className="main-image" src={image} />
           <strong>{name}</strong>
           <span className="price">
             <span>$</span>
             <span>{price}</span>
           </span>
-          </NavLink>
         </a>
-        {/* <NavLink className="btn btn-button title" to={playList.ruta}>{playList.title}</NavLink > */}
-        <button className="add-to-cart"  onClick={() => addDishes(index)}>Add to cart</button>
-      </li>
+      </NavLink>
+      {/* <NavLink className="btn btn-button title" to={playList.ruta}>{playList.title}</NavLink > */}
+      <button className="add-to-cart" onClick={() => addDishes(index)}>Add to cart</button>
+    </li>
   );
 }
-const Home = ( {dishes}) =>  {
+const Home = ({ dishes }) => {
 
-  const listaComponent = dishes.map((item, index)=>{
+  const listaComponent = dishes.map((item, index) => {
     return <Lista_Dishes
-        key={index}
-        image={item.image} 
-        name={item.name}
-        price={item.price}
-        index={index}
-      />
+      key={index}
+      image={item.image}
+      name={item.name}
+      price={item.price}
+      index={index}
+    />
   })
   return (<section id="content">
     <div>
@@ -41,9 +41,8 @@ const Home = ( {dishes}) =>  {
       </ul>
     </div>
   </section>)
-}  
+}
 
 /*const mapToProps = ({dishes}) => ({dishes});
 export default connect(mapToProps)(Home);*/
 export default Home;
-  
