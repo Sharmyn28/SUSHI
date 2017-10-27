@@ -8,11 +8,16 @@ html {
     background-color: black;
 }
 
+h1{
+    color: black;
+}
+
 .background-fish{
     background-image: url(https://www.dailyscandinavian.com/wp-content/uploads/2017/03/210317-sushi-in-oslo.jpg);
     background-size: cover;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
+    width: 100%
 }
 
 h3 {
@@ -40,7 +45,7 @@ a {
     background-color: white;    
     width: 90%; 
 }
-.carousel-control 			 { width:  4%; }
+.carousel-control            { width:  4%; }
 .carousel-control.left,
 .carousel-control.right {
   background-image:none;
@@ -63,6 +68,22 @@ a {
     max-height: 150px;
     max-width: 100%;
   }
+}
+
+.price{
+    color: grey;
+}
+
+.next1{
+    padding: 0 32px 0 25px;
+}
+
+.next1:hover, .next2:hover{
+    background-color: #FE4164;
+}
+
+.next2{
+    padding: 0 25px 0 32px
 }
 
 @media (max-width: 767px) {
@@ -109,4 +130,19 @@ a {
       transform: translate3d(-16.7%, 0, 0);
   }
   
+}
+
+h5{
+    font-weight: bold;
+}
+
+.img1{
+    margin-left: -56px;
+    height: 100%;
+}
+
+.price1{
+    color: #756C6C;
+    font-size: 200%;
+    font-weight: 400;
 }
