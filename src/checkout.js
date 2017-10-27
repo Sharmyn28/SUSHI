@@ -50,8 +50,7 @@ const Checkout = ({  shopDishes }) => {
                 <div id="checkout-bottom-image"></div>
             </div>           
             </section>
-    )          
-    
+    )         
 }
 
 const CheckoutView = () => {
@@ -60,8 +59,7 @@ const CheckoutView = () => {
             <div>
                 <div id='wrapper'>
                     <Header shopDishes={shopDishes}/>
-                    <div id='main-section'>
-                        {/*<ShoppingCart dishes={dishes} />*/}
+                    <div id='main-section'>                      
                         <Checkout shopDishes={shopDishes} />
                     </div>
                     <Footer />
