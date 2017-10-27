@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Carousel.css';
 // import {dishes, selectedFood} from './dishes'
-
 import { connect } from 'redux-zero/react';
 import { nextAction, previewAction } from './actions-diana';
 import Header from './header';
