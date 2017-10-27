@@ -4,7 +4,7 @@ import {connect} from 'redux-zero/react';
 import './App.css';
 
 const Home = ( {dishes}) =>  {
-  return (<section id="main-section">
+  return (<section id="content">
     <div>
       <ul className="k-widget k-listview">
         {
