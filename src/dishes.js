@@ -26,7 +26,7 @@ export const dishes = [
 		price: 17.00,
 		nutritional: "Nutritional Information",
 		nutritionalInfo: ["Protein. 0.229", "Fat (total): 2.2852", "Carbohydrate: 2.2852", "Energy (kJ): 5.1003", "Energy (kcal): 1.2190", "Sugar: 0.0037"],
-	},
+	},/*
 	{
 		id: 3,
 		image: "http://demos.telerik.com/kendo-ui/content/spa/websushi/images/200/edamame.jpg",
@@ -170,7 +170,7 @@ export const dishes = [
 		price: 11.50,
 		nutritional: "Nutritional Information",
 		nutritionalInfo: ["Protein: 1.7697", "Fat (total): 0.2534", "Carbohydrate: 0.2534", "Energy (kJ): 7.508", "Energy (kcal): 1.7945", "Sugar: 0.1798"],
-	}
+	}*/
 ];
                     // const initialState = {
                     //     dishes:dishes ,
