@@ -40,3 +40,10 @@ export const deleteAll = () => {
 		shopDishes: []
 	})
 }
+
+export const moveSlides = (index) =>{
+    console.log(index)
+    store.setState({
+        selectedFood: index
+    })
+}
