@@ -24,7 +24,7 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 					<br /><hr />
 					<div className="row">
 						<div className="col-lg-6 price1">
-							$ {price}.00
+							$ {price}
                 		</div>
 						<div className="col-lg-6">
 							<button
@@ -106,7 +106,7 @@ const CarouselView = ({ dishes, selectedFood, shopDishes }) => {
 		<div id='application'>
 			<div>
 				<div id='wrapper'>
-					<Header />
+					<Header shopDishes={shopDishes} />
 					<div id='main-section'>
 						<ShoppingCart shopDishes={shopDishes} />
 						<Carousel dishes={dishes} selectedFood={selectedFood} />
