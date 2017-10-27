@@ -54,12 +54,12 @@ const Checkout = ({ dishes }) => {
 }
 
 
-const CheckoutView = () => {
+const CheckoutView = ({shopDishes}) => {
     return (
         <div id='application' >
             <div>
                 <div id='wrapper'>
-                    <Header />
+                    <Header shopDishes={shopDishes}/>
                     <div id='main-section'>
                         {/*<ShoppingCart dishes={dishes} />*/}
                         <Checkout />
