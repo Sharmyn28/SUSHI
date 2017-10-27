@@ -84,5 +84,5 @@ const CheckoutView = ({ shopDishes }) => {
     )
 }
 
-const mapToProps = ({ shopDishes }) => ({ shopDishes });
+const mapToProps = ({shopDishes}) => ({shopDishes});
 export default connect(mapToProps)(CheckoutView);
