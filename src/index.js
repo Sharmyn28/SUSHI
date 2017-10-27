@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Carousel from './Carousel';
+import CarouselView from './Carousel';
 import Home from './Home';
-import Checkout from './checkout'
+import CheckoutView from './checkout'
 import {Provider} from 'redux-zero/react'
 import store from './store'
 import registerServiceWorker from './registerServiceWorker';
@@ -18,8 +18,8 @@ const Index = () => (
          <Switch>
             <Route  exact path = "/" component={App}/>
             <Route  path = "/home" component={App}/>
-            <Route  path = "/carousel" component={Carousel}/>
-            <Route  path = "/details" component={Checkout}/>
+            <Route  path = "/carousel" component={CarouselView}/>
+            <Route  path = "/details" component={CheckoutView}/>
           </Switch>
       </HashRouter>
    </Provider>
