@@ -108,7 +108,7 @@ const CarouselView = ({ dishes, selectedFood, shopDishes }) => {
 				<div id='wrapper'>
 					<Header shopDishes={shopDishes}/>
 					<div id='main-section'>
-						<ShoppingCart shopDishes={shopDishes} />
+						{shopDishes.length!=0?<ShoppingCart shopDishes={shopDishes} />:<div id='header'></div>}
 						<Carousel dishes={dishes} selectedFood={selectedFood} />
 					</div>
 					<Footer />
