@@ -2,7 +2,7 @@ import store from './store';
 
 export const addDishes = (index) => {
     let newList = [...store.getState().shopDishes]
-    let meme = [...store.getState().dishes]
+    let original = [...store.getState().dishes]
     for(let i in newList){
         if(newList[i].id==index){
             newList[i].count+=1;
@@ -14,10 +14,10 @@ export const addDishes = (index) => {
     }
     newList.push({
         id: index,
-        image: meme[index].image,
-        name: meme[index].name,
-        price: meme[index].price,
-        count: meme[index].count
+        image: original[index].image,
+        name: original[index].name,
+        price: original[index].price,
+        count: original[index].count
     });
     store.setState({
         shopDishes: newList
