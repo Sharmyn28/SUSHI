@@ -16,8 +16,7 @@ const InfoDish = ({ image, name, description,price ,nutritional, nutritionalInfo
 				<img src={image} />
 			</div>
 			<div className="col-lg-6">
-				<h2>{name}<br />
-				</h2>
+				<h2>{name}</h2>
 				<p>{description}</p>
 				<hr />
 				<div className="row">
