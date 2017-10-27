@@ -26,11 +26,9 @@ const Checkout = ({shopDishes}) => {
             </tr>
         </tbody>
        </table>      
-    );
-    
+    );    
     });
-
-    
+   
     let totalDishes = shopDishes.length;
 	let totalPrice = shopDishes.reduce(function (total, dish){
 		return total +(dish.price*dish.count);
@@ -63,8 +61,7 @@ const Checkout = ({shopDishes}) => {
                 <div id="checkout-bottom-image"></div>
             </div>           
             </section>
-    )         
-}
+    )         }
 
 const CheckoutView = ({shopDishes}) => {
     return (
