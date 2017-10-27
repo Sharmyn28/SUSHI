@@ -8,10 +8,10 @@ import Header from './header';
 import ShoppingCart from './shoppingCart';
 import {dishes, shopDishes} from './dishes';
 
-const Checkout = ({ shopDishes }) => {
-    const Listdishs= shopDishes.map((item,index)=>{
-        return(             
-        <table >
+const Checkout = ({shopDishes}) => {
+    const Listdishs=shopDishes.map((item,index)=>{
+        return( 
+        <table>
         <thead>
          <tr>
           <th>Item</th>
@@ -68,7 +68,8 @@ const CheckoutView = ({shopDishes}) => {
             <div>
                 <div id='wrapper'>
                     <Header shopDishes={shopDishes}/>
-                    <div id='main-section'>                      
+                    <div id='main-section'>
+                        <ShoppingCart shopDishes={shopDishes} />
                         <Checkout shopDishes={shopDishes} />
                     </div>
                     <Footer />
