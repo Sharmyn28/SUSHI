@@ -1,34 +1,29 @@
 import store from './store';
 
 export const addDishes = (index) => {
-    let oldList = store.getState().shopDishes;
-    let meme = store.getState().dishes;
-    for(let i in meme){
-        if(i==index){
-            console.log('entreeee');
-            let ide = meme[i].id;
-            let img = meme[i].image;
-            let name = meme[i].name;
-            let px = meme[i].price;
-            let qq = meme[i].count;
-
-            const newList = oldList.concat({
-                /* id: oldList.length, */
-                id: ide,
-                image: img,
-                name: name,
-                price: px,
-                count: qq
-            });
-
+    let newList = [...store.getState().shopDishes]
+    let meme = [...store.getState().dishes]
+    for(let i in newList){
+        if(newList[i].id==index){
+            newList[i].count+=1;
             store.setState({
                 shopDishes: newList
              });
-            console.log(newList);
-            console.log(index);
+             return;
         }
     }
-};
+    newList.push({
+        id: index,
+        image: meme[index].image,
+        name: meme[index].name,
+        price: meme[index].price,
+        count: meme[index].count
+    });
+    store.setState({
+        shopDishes: newList
+     });
+    console.log('agrega')
+}
 
 export const removeDish = (index) =>{
     const oldList = store.getState().shopDishes.filter((item, idx) => idx !== index);
