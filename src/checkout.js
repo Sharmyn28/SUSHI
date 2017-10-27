@@ -5,8 +5,8 @@ import {NavLink} from 'react-router-dom';
 import {connect } from "redux-zero/react";
 import Footer from './footer';
 import Header from './header';
-import {shopDishes} from './dishes';
 import ShoppingCart from './shoppingCart';
+import {dishes, shopDishes} from './dishes';
 
 const Checkout = ({shopDishes}) => {
     const Listdishs=shopDishes.map((item,index)=>{
@@ -17,17 +17,27 @@ const Checkout = ({shopDishes}) => {
              <td>
                  <div class="cart-image-wrapper">
                  <img src={item.image}/></div> 
-                 {/* <span class="product-name" data-bind="text: item.name">{item.name}</span> */}
+                 <span class="product-name" data-bind="text: item.name">{item.name}</span>
              </td>
-                 <td><input type="number" class="inputnumber k-widget k-numerictextbox"  name="lastname"/></td>           
+                 <td><input type="number" class="inputnumber k-widget k-numerictextbox" name="lastname" value={item.count} /></td>           
              <td>
-                 <p class="table-price" data-bind="text: itemPrice">{item.price}</p><p></p>
+                 <p class="table-price" data-bind="text: itemPrice"> ${item.price}</p><p></p>
              </td>
             </tr>
         </tbody>
-       </table>
+       </table>      
     );
+    
     });
+
+    
+    let totalDishes = shopDishes.length;
+	let totalPrice = shopDishes.reduce(function (total, dish){
+		return total +(dish.price*dish.count);
+	}, 0);
+
+    console.log("lis",Listdishs)
+    console.log("lis",shopDishes)
     // primera vista
     return (
         <section id="content" class="style section-final" >
@@ -46,17 +56,15 @@ const Checkout = ({shopDishes}) => {
                     </thead>
                     </table>
                     { Listdishs}
-                    <p id="total-checkout"><em>total:</em><span data-bind="text: totalPrice">$4.00</span></p>
+                    <p id="total-checkout"><em>total:</em><span data-bind="text: totalPrice">${totalPrice}</span></p>
                     <a class="cancel-order" href="#" data-bind="click: emptyCart">cancel order</a>
                     <button class="order-now" data-bind="click: proceed"><NavLink to={"/home"}>order now! </NavLink> </button>
                 </div>
                 <div id="checkout-bottom-image"></div>
             </div>           
             </section>
-    )          
-    
+    )         
 }
-
 
 const CheckoutView = ({shopDishes}) => {
     return (
@@ -75,6 +83,5 @@ const CheckoutView = ({shopDishes}) => {
     )
 }
 
-//export default CheckoutView;
-const mapToProps = ({shopDishes}) => ({shopDishes});
+const mapToProps = ({ shopDishes }) => ({ shopDishes });
 export default connect(mapToProps)(CheckoutView);
