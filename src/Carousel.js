@@ -24,23 +24,23 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 					<div className="row">
 						<div className="col-lg-6 price1">
 							$ {price}.00
-                </div>
+                		</div>
 						<div className="col-lg-6">
 							<a
 								className="btn btn-danger pull-right"
 								href="/article/show/sed-vel-lectus/9">
 								<i className="fa fa-long-arrow-right">
 									+ADD TO CART
-              </i>
+              					</i>
 							</a>
 						</div>
 					</div>
 				</div>
-				<div className="col-lg-3 pull-right">
+				<div className="col-lg-3 pull-right last-div">
 					<h5>{nutritional}</h5>
 					<br />
 					<ul>
-						<li> {nutritionalInfo}</li>
+					{nutritionalInfo}
 					</ul>
 				</div>
 			</div>
@@ -78,28 +78,23 @@ const Carousel = ({ dishes, selectedFood }) => {
 							href="#carousel-example-generic"
 							role="button"
 							data-slide="prev"
-							onClick={previewAction}>
-							<span
-								className="glyphicon glyphicon-chevron-left"
-								aria-hidden="true" />
-							<span className="sr-only">Previous</span>
+							onClick={previewAction}
+							id = "navigate-prev">
 						</a>
 						<a
 							className="right carousel-control next2"
 							href="#carousel-example-generic"
 							role="button"
 							data-slide="next"
-							onClick={nextAction}>
-							<span
-								className="glyphicon glyphicon-chevron-right"
-								aria-hidden="true" />
-							<span className="sr-only">Next</span>
+							onClick={nextAction}
+							id = "navigate-next">
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	);
+
 }
 
 const CarouselView = ({ dishes, selectedFood }) => {
