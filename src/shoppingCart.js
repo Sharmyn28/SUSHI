@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './shoppingCart.css';
 import {dishes, shopDishes } from './dishes';
+import {removeDish} from './actions';
 import './App.css';
 
-const Dish = ({src, price, count}) => {
+const Dish = ({src, price, count, removeDish}) => {
 	return (
 		<li className='selected-products-list'>
-			<a className='view-selected-items'>
+			<a className='view-selected-items' onClick={removeDish}>
 				<img className='currentDish' src={src} alt='dish'/>
 			</a>
 			<span className='selected-image-price'>
@@ -24,6 +25,7 @@ const ShoppingCart = ({shopDishes}) => {
 				src={dish.image}
 				price={dish.price}
 				count={dish.count}
+				removeDish={()=> removeDish(index)}
 			/>
 		)
 	})

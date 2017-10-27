@@ -25,3 +25,12 @@ export const addDishes = (index) => {
         }
     }
 };
+
+export const removeDish = (index) =>{
+    const oldList = store.getState().shopDishes.filter((item, idx) => idx !== index);
+
+    store.setState({
+        shopDishes: oldList
+    })
+    console.log(oldList);
+}
