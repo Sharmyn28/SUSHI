@@ -2,22 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'redux-zero/react';
 import { NavLink } from 'react-router-dom';
 /* import {Redirect, NavLink} from 'react-router-dom';*/
-import { addDishes } from './actions'
+import { addDishes, moveSlides } from './actions'
 import './App.css';
 
-const Lista_Dishes = ({ image, name, price, index }) => {
+const Lista_Dishes = ({ image, name, price, index, moveSlides }) => {
   return (
     <li className="products">
-      <NavLink to={"/carousel"}>
-        <a className="view-details">
-          <img className="main-image" src={image} />
-          <strong>{name}</strong>
-          <span className="price">
-            <span>$</span>
-            <span>{price}</span>
-          </span>
-        </a>
-      </NavLink>
+      <a className="view-details" onClick={moveSlides} href='#carousel'>
+        <img className="main-image" src={image} />
+        <strong>{name}</strong>
+        <span className="price">
+          <span>$</span>
+          <span>{price}</span>
+        </span>
+      </a>
       {/* <NavLink className="btn btn-button title" to={playList.ruta}>{playList.title}</NavLink > */}
       <button className="add-to-cart" onClick={() => addDishes(index)}>Add to cart</button>
     </li>
@@ -32,6 +30,7 @@ const Home = ({ dishes }) => {
       name={item.name}
       price={item.price}
       index={index}
+      moveSlides={()=> moveSlides(index)}
     />
   })
   return (<section id="content">
