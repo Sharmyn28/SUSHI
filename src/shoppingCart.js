@@ -28,8 +28,8 @@ const ShoppingCart = ({shopDishes}) => {
 		)
 	})
 
-	let totalDishes = dishes.length;
-	let totalPrice = dishes.reduce(function (total, dish){
+	let totalDishes = shopDishes.length;
+	let totalPrice = shopDishes.reduce(function (total, dish){
 		return total + dish.price;
 	}, 0);
 	return (
