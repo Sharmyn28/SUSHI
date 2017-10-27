@@ -34,3 +34,10 @@ export const removeDish = (index) =>{
     })
     console.log(oldList);
 }
+    
+export const deleteAll = () => {
+    console.log('borrame')
+	 store.setState({
+		shopDishes: []
+	})
+}

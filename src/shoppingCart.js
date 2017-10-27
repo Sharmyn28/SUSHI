@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './shoppingCart.css';
 import {dishes, shopDishes } from './dishes';
-import {removeDish} from './actions';
+import {removeDish, deleteAll} from './actions';
 import './App.css';
 
 const Dish = ({src, price, count, removeDish}) => {
@@ -26,6 +26,7 @@ const ShoppingCart = ({shopDishes}) => {
 				price={dish.price}
 				count={dish.count}
 				removeDish={()=> removeDish(index)}
+				index={index}
 			/>
 		)
 	})
@@ -43,8 +44,8 @@ const ShoppingCart = ({shopDishes}) => {
 					</ul>
 					<div id='shopping-cart'>
 						<h3>your<br />shopping cart</h3>
-						<p className='total-price'>${totalPrice}.00</p>
-						<a id='empty-cart'>empty cart</a>
+						<p className='total-price'>${totalPrice}</p>
+						<a id='empty-cart' onClick={() => deleteAll()}>empty cart</a>
 						<a id='checkout'>checkout</a>
 					</div>
 				</div>
