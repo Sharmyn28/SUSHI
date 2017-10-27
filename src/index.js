@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Carousel from './Carousel';
 import Home from './Home';
+import Checkout from './checkout'
 import {Provider} from 'redux-zero/react'
 import store from './store'
 import registerServiceWorker from './registerServiceWorker';
@@ -16,8 +17,9 @@ const Index = () => (
       {/* <Carousel dishes={dishes} /> */}
          <Switch>
             <Route  exact path = "/" component={App}/>
-            <Route  exact path = "/home" component={App}/>
-            <Route  exact path = "/carousel" component={Carousel}/>
+            <Route  path = "/home" component={App}/>
+            <Route  path = "/carousel" component={Carousel}/>
+            <Route  path = "/details" component={Checkout}/>
           </Switch>
       </HashRouter>
    </Provider>
