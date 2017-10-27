@@ -344,6 +344,7 @@ h3{
 .view-selected-items:hover:after {
   background-color:  rgba(0,0,0,0.75);
   background-repeat: no-repeat;
+  background-image: url(http://demos.telerik.com/kendo-ui/content/spa/websushi/css/images/remove-icon.png);
   background-position: 50% 50%;
 }
 
