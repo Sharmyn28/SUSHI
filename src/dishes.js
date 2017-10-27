@@ -192,13 +192,4 @@ export const dishes = [
 	}
 ];
 
-
-export const shopDishes = [
-	{
-		id: 0,
-		image: "http://demos.telerik.com/kendo-ui/content/spa/websushi/images/200/sashimi-salad.jpg",
-		name: "Sashimi salad",
-		price: 12.00,
-		count:1,
-	},
-];
+export const shopDishes = [];
