@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {connect} from 'redux-zero/react';
-import {NavLink} from 'react-router-dom';
+import { connect } from 'redux-zero/react';
+import { NavLink } from 'react-router-dom';
 /* import {Redirect, NavLink} from 'react-router-dom';*/
-import {addDishes} from './actions'
+import { addDishes, moveSlides } from './actions'
 import './App.css';
 
 const Lista_Dishes = ({image, name, price, index}) =>{
@@ -22,16 +22,17 @@ const Lista_Dishes = ({image, name, price, index}) =>{
       </li>
   );
 }
-const Home = ( {dishes}) =>  {
+const Home = ({ dishes }) => {
 
-  const listaComponent = dishes.map((item, index)=>{
+  const listaComponent = dishes.map((item, index) => {
     return <Lista_Dishes
-        key={index}
-        image={item.image} 
-        name={item.name}
-        price={item.price}
-        index={index}
-      />
+      key={index}
+      image={item.image}
+      name={item.name}
+      price={item.price}
+      index={index}
+      moveSlides={()=> moveSlides(index)}
+    />
   })
   return (<section id="content">
     <div>
@@ -40,9 +41,8 @@ const Home = ( {dishes}) =>  {
       </ul>
     </div>
   </section>)
-}  
+}
 
 /*const mapToProps = ({dishes}) => ({dishes});
 export default connect(mapToProps)(Home);*/
 export default Home;
-  
