@@ -30,7 +30,7 @@ const InfoDish = ({ image, name, description,price ,nutritional, nutritionalInfo
 							href="/article/show/sed-vel-lectus/9">
 							<i className="fa fa-long-arrow-right">
 								+ADD TO CART
-											</i>
+							</i>
 						</a>
 					</div>
 				</div>
