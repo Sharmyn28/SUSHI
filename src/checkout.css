@@ -147,3 +147,10 @@ html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, input, p, th, td, button, s
     padding: 0;
     border: 0;
 }
+/* imagen de fondo */
+#checkout-bottom-image {
+    background: url("http://demos.telerik.com/kendo-ui/content/spa/websushi/images/200/shiromi.jpg") no-repeat bottom left;
+    height: 53px;
+    margin-bottom: 20px;
+}
+
