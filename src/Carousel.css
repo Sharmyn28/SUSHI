@@ -6,6 +6,7 @@ html {
 
 .carousel{
     background-color: black;
+    width: 100%;
 }
 
 h1{
@@ -43,7 +44,7 @@ a {
 .carousel-inner { 
     margin: auto; 
     background-color: white;    
-    width: 90%; 
+    width: 80%; 
 }
 .carousel-control            { width:  4%; }
 .carousel-control.left,
@@ -83,7 +84,7 @@ a {
 }
 
 .next2{
-    padding: 0 25px 0 32px
+    padding: 0 26px 0 32px
 }
 
 @media (max-width: 767px) {

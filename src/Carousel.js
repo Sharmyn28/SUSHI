@@ -36,11 +36,11 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 						</div>
 					</div>
 				</div>
-				<div className="col-lg-3 pull-right">
+				<div className="col-lg-3 pull-right last-div">
 					<h5>{nutritional}</h5>
 					<br />
 					<ul>
-						<li> {nutritionalInfo}</li>
+					{nutritionalInfo}
 					</ul>
 				</div>
 			</div>
@@ -78,28 +78,23 @@ const Carousel = ({ dishes, selectedFood }) => {
 							href="#carousel-example-generic"
 							role="button"
 							data-slide="prev"
-							onClick={previewAction}>
-							<span
-								className="glyphicon glyphicon-chevron-left"
-								aria-hidden="true" />
-							<span className="sr-only">Previous</span>
+							onClick={previewAction}
+							id = "navigate-prev">
 						</a>
 						<a
 							className="right carousel-control next2"
 							href="#carousel-example-generic"
 							role="button"
 							data-slide="next"
-							onClick={nextAction}>
-							<span
-								className="glyphicon glyphicon-chevron-right"
-								aria-hidden="true" />
-							<span className="sr-only">Next</span>
+							onClick={nextAction}
+							id = "navigate-next">
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	);
+
 }
 
 const CarouselView = ({ dishes, selectedFood }) => {
