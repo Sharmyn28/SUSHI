@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './shoppingCart.css';
-import {dishes, shopDishes} from './dishes';
+import {dishes, shopDishes } from './dishes';
+import {removeDish, deleteAll} from './actions';
 import './App.css';
-import {deleteAll} from './actions'
 
-const Dish = ({src, price, count}) => {
+const Dish = ({src, price, count, removeDish}) => {
 	return (
 		<li className='selected-products-list'>
-			<a className='view-selected-items'>
+			<a className='view-selected-items' onClick={removeDish}>
 				<img className='currentDish' src={src} alt='dish'/>
 			</a>
 			<span className='selected-image-price'>
@@ -25,6 +25,7 @@ const ShoppingCart = ({shopDishes}) => {
 				src={dish.image}
 				price={dish.price}
 				count={dish.count}
+				removeDish={()=> removeDish(index)}
 				index={index}
 			/>
 		)
@@ -43,7 +44,7 @@ const ShoppingCart = ({shopDishes}) => {
 					</ul>
 					<div id='shopping-cart'>
 						<h3>your<br />shopping cart</h3>
-						<p className='total-price'>${totalPrice}.00</p>
+						<p className='total-price'>${totalPrice}</p>
 						<a id='empty-cart' onClick={() => deleteAll()}>empty cart</a>
 						<a id='checkout'>checkout</a>
 					</div>
