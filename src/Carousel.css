@@ -65,6 +65,23 @@ a {
   }
 }
 
+.price{
+    color: grey;
+}
+
+.next1{
+    padding: 0 32px 0 25px;
+}
+
+.next1:hover, .next2:hover{
+    background-color: #FE4164;
+}
+
+.next2{
+    padding: 0 25px 0 32px
+}
+
+
 @media (max-width: 767px) {
   .carousel-inner > .item.next,
   .carousel-inner > .item.active.right {

@@ -21,8 +21,8 @@ const InfoDish = ({ image, name, description,price ,nutritional, nutritionalInfo
 				<p>{description}</p>
 				<hr />
 				<div className="row">
-					<div className="col-lg-6">
-						{price}
+					<div className="col-lg-6 price1">
+						$ {price}
 								</div>
 					<div className="col-lg-6">
 						<a
@@ -48,7 +48,7 @@ const InfoDish = ({ image, name, description,price ,nutritional, nutritionalInfo
 
 
 const Carousel = ({ dishes, selectedFood}) => {
-	console.log("disshes",selectedFood)
+	console.log("dishes",selectedFood)
 	return (
 		<div className="background-fish">
 			<div className="container carousel">
@@ -72,7 +72,7 @@ const Carousel = ({ dishes, selectedFood}) => {
 				nutritionalInfo= {dishes[selectedFood].nutritionalInfo}
 			/>
 		<a
-			className="left carousel-control"
+			className="left carousel-control next1"
 			href="#carousel-example-generic"
 			role="button"
 			data-slide="prev"
@@ -83,7 +83,7 @@ const Carousel = ({ dishes, selectedFood}) => {
 			<span className="sr-only">Previous</span>
 		</a>
 		<a
-			className="right carousel-control"
+			className="right carousel-control next2"
 			href="#carousel-example-generic"
 			role="button"
 			data-slide="next"
