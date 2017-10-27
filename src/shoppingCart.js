@@ -47,7 +47,7 @@ const ShoppingCart = ({shopDishes}) => {
 						<h3>your<br />shopping cart</h3>
 						<p className='total-price'>${totalPrice}</p>
 						<a id='empty-cart' onClick={() => deleteAll()}>empty cart</a>
-						<a id='checkout'> <NavLink to={"/details"}>checkout</NavLink></a>
+						<NavLink to={"/details"} id='checkout'>checkout</NavLink>
 					</div>
 				</div>
 			</div>
