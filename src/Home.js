@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'redux-zero/react';
+import {NavLink} from 'react-router-dom';
 /* import {Redirect, NavLink} from 'react-router-dom';*/
 import {addDishes} from './actions'
 import './App.css';
@@ -20,7 +21,6 @@ const Lista_Dishes = ({image, name, price, index}) =>{
       </li>
   );
 }
-
 const Home = ( {dishes}) =>  {
 
   const listaComponent = dishes.map((item, index)=>{
@@ -35,12 +35,13 @@ const Home = ( {dishes}) =>  {
   return (<section id="content">
     <div>
       <ul className="k-widget k-listview">
-        {listaComponent}
+       
+        <NavLink to={"/carousel"}> {listaComponent}</NavLink>
       </ul>
     </div>
   </section>)
-}
-  
+}  
+
 /*const mapToProps = ({dishes}) => ({dishes});
 export default connect(mapToProps)(Home);*/
 export default Home;

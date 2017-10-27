@@ -20,7 +20,7 @@ const Index = () => (
             <Route  path = "/home" component={App}/>
             <Route  path = "/carousel" component={CarouselView}/>
             <Route  path = "/details" component={CheckoutView}/>
-          </Switch>
+        </Switch>
       </HashRouter>
    </Provider>
 )
