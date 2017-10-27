@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './shoppingCart.css';
+import {NavLink} from 'react-router-dom';
 import {dishes, shopDishes } from './dishes';
 import {removeDish, deleteAll} from './actions';
 import './App.css';
@@ -33,7 +34,7 @@ const ShoppingCart = ({shopDishes}) => {
 
 	let totalDishes = shopDishes.length;
 	let totalPrice = shopDishes.reduce(function (total, dish){
-		return total + dish.price;
+		return total + (dish.price*dish.count);
 	}, 0);
 	return (
 		<section id='pre-content'>
@@ -46,7 +47,7 @@ const ShoppingCart = ({shopDishes}) => {
 						<h3>your<br />shopping cart</h3>
 						<p className='total-price'>${totalPrice}</p>
 						<a id='empty-cart' onClick={() => deleteAll()}>empty cart</a>
-						<a id='checkout'>checkout</a>
+						<NavLink to={"/details"} id='checkout'>checkout</NavLink>
 					</div>
 				</div>
 			</div>
