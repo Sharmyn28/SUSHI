@@ -24,7 +24,7 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 					<br /><hr />
 					<div className="row">
 						<div className="col-lg-6 price1">
-							$ {price}
+							$ {price}.00
                 		</div>
 						<div className="col-lg-6">
 							<button
