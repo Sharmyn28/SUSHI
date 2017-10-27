@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'redux-zero/react';
-/* import {Redirect, NavLink} from 'react-router-dom';*/
 import {addDishes} from './actions'
 import './App.css';
 
@@ -29,7 +28,7 @@ const Home = ( {dishes}) =>  {
         image={item.image} 
         name={item.name}
         price={item.price}
-        index={index}
+        index={index}        
       />
   })
   return (<section id="content">
