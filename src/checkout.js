@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {NavLink} from 'react-router-dom';
 import { connect } from "redux-zero/react";
 import Footer from './footer';
 import Header from './header';
@@ -43,7 +44,7 @@ const Checkout = ({ dishes }) => {
                     {/* { Listdishs} */}
                     <p id="total-checkout"><em>total:</em><span data-bind="text: totalPrice">$4.00</span></p>
                     <a class="cancel-order" href="#" data-bind="click: emptyCart">cancel order</a>
-                    <button class="order-now" data-bind="click: proceed">order now!</button>
+                    <button class="order-now" data-bind="click: proceed"><NavLink to={"/home"}>order now! </NavLink> </button>
                 </div>
                 <div id="checkout-bottom-image"></div>
             </div>                

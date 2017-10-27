@@ -27,6 +27,11 @@ const ShoppingCart = ({dishes}) => {
 			/>
 		)
 	})
+
+	let totalDishes = dishes.length;
+	let totalPrice = dishes.reduce(function (total, dish){
+		return total + dish.price;
+	}, 0);
 	return (
 		<section id='pre-content'>
 			<div>
@@ -36,7 +41,7 @@ const ShoppingCart = ({dishes}) => {
 					</ul>
 					<div id='shopping-cart'>
 						<h3>your<br />shopping cart</h3>
-						<p className='total-price'>$21.00</p>
+						<p className='total-price'>${totalPrice}.00</p>
 						<a id='empty-cart'>empty cart</a>
 						<a id='checkout'> <NavLink to={"/details"}>checkout</NavLink></a>
 					</div>

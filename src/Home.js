@@ -21,7 +21,6 @@ const Lista_Dishes = ({image, name, price, index}) =>{
       </li>
   );
 }
-
 const Home = ( {dishes}) =>  {
 
   const listaComponent = dishes.map((item, index)=>{
