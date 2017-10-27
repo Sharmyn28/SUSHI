@@ -30,7 +30,7 @@ const InfoDish = ({ image, name, description, price, nutritional, nutritionalInf
 							<button
 								className="btn btn-danger pull-right"
 								href="/article/show/sed-vel-lectus/9"
-								onClick={() => addDishes(index)}>
+								>
 								<i className="fa fa-long-arrow-right">
 									+ADD TO CART
               					</i>
